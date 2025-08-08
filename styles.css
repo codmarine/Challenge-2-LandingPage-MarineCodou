@@ -22,7 +22,7 @@ header {
 /* === Hero Section === */
 .hero {
   background: linear-gradient(rgba(30, 62, 54, 0.5), rgba(30, 62, 54, 0.5)),
-              url('./images/hero2.jpg') center center / cover no-repeat;
+              url('./images/hero2.JPG') center center / cover no-repeat;
   color: white;
   text-align: center;
   padding: 100px 20px;
