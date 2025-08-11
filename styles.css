@@ -9,7 +9,7 @@ body {
 
 header {
   background-color: #1E3E36;
-  height: 72px;
+  height: 84px;
   display: flex;
   align-items: center;
   padding: 12px 40px;
@@ -17,6 +17,13 @@ header {
 
 .logo {
   height: 40px;
+}
+
+header .logo{ height: 62px; }           /* logo plus visible */
+
+@media (max-width: 768px){
+  header{ height: 72px; }               /* on garde un header compact en mobile */
+  header .logo{ height: 50px; }         
 }
 
 .header-cta {
@@ -51,6 +58,18 @@ header {
 
   .header-cta .cta-mobile {
     display: inline;
+  }
+}
+/* --- Section titles: taille uniforme --- */
+.section-title{
+  font-size: 2rem;        /* desktop */
+  line-height: 1.2;
+  font-weight: 700;
+  margin: 0 0 24px;
+}
+@media (max-width: 768px){
+  .section-title{ 
+    font-size: 1.6rem;    /* mobile */
   }
 }
 
@@ -239,7 +258,6 @@ header {
 .testimonials .section-title {
   color: #fff;
   margin-bottom: 40px;
-  font-size: 2rem;
 }
 
 /* grille desktop = 3 colonnes */
@@ -389,6 +407,17 @@ header {
   border-radius: 3px;
 }
 
+.faq-content a::after{
+  content: "↗";           /* ou "→" si tu préfères */
+  margin-left: .35rem;
+  font-weight: 700;
+  display: inline-block;
+  transform: translateY(-1px);
+  transition: transform .2s ease;
+}
+.faq-content a:hover::after{
+  transform: translate(3px, -1px);
+}
 
 /* Responsive */
 @media (max-width: 768px) {
@@ -472,5 +501,3 @@ footer .social-icons img:hover {
     line-height: 1.4;
   }
 }
-
-
